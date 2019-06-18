@@ -16,6 +16,7 @@ body {
 }
 .navbar-brand{
   color:white!important;
+  cursor: pointer;
 }
 .name{
   font-weight: 800;
@@ -25,6 +26,7 @@ body {
 
   float: right;
 }
+
 .titleBox{
 width: auto;
 position: absolute;
@@ -46,4 +48,26 @@ top: 50%;
   font-size: 70px;
   letter-spacing: 0.310em;
   color:#fff;
+}
+
+.introBox{
+  width: auto;
+position: absolute;
+left: 50%;
+transform: translate(-50%, -50%) ;
+text-align: left;
+top: 50%;
+color:#fff;
+}
+
+.introBox h1{
+  font-size: 50px;
+  letter-spacing: 0.110em;
+}
+
+.introBox p{
+  letter-spacing: 0.09em;
+  line-height: 207.5%;
+  font-size: 20px;
+  font-weight: 400;
 }
