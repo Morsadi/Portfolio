@@ -1,13 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Expanded&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Encode Sans Expanded', sans-serif;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.navbar{
+  display: inline-block!important;
+  width: 100%;
+  background:none;
+  padding: 20px 70px!important;
+  position: absolute!important;
+  
+}
+.navbar-brand{
+  color:white!important;
+}
+.name{
+  font-weight: 800;
+  letter-spacing: 0.105em;
+}
+.right{
+
+  float: right;
+}
+.titleBox{
+width: auto;
+position: absolute;
+left: 50%;
+transform: translate(-50%, -50%) ;
+text-align: center;
+top: 50%;
+}
+.titleLine{
+  font-size: 100px;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-weight: 1000;
+  color: #fff;
+}
+
+.tagLine{
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-weight: 100;
+  font-size: 70px;
+  letter-spacing: 0.310em;
+  color:#fff;
 }
