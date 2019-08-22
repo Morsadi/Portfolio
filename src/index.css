@@ -146,6 +146,8 @@ color:#fff;
     top: 50%;
     transform: translateY(-50%);
     left: 20px;
+    display: flex;
+    flex-direction: column
 }
 #socialMedia button{
   margin: 7px;
@@ -258,51 +260,6 @@ margin-bottom: 30px;
 outline: none
 }
 
-
-
-@media only screen and (max-width: 600px){
-
-  #root > div > div.navigation > nav > span.navbar-brand.about.name{
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    top: -30px;
-  }
-  #root > div{
-    position: relative;
-  }
-  .navbar{
-    margin-top: 40px;
-  }
-  .titleLine{
-    font-size: 29px;
-  }
-  .tagLine{
-    font-size: 20px;
-
-  }
-  #socialMedia{
-    bottom: 20px;
-    transform: translatex(-50%);
-    left: 50%;
-    top: auto;
-    width: 110px;
-    text-align: center;
-    display: flex;
-  }
-  .introBox{
-    position: static;
-    width: 80%;
-    width: 100%;
-    margin: 0 auto;
-    padding: 150px 40px 90px;
-    transform: none;
-    
-  }
- 
-
-}
-
 .btns{
   height: 50px;
   width: 50px;
@@ -335,4 +292,70 @@ ul li{
   font-size: 17px;
 
   letter-spacing: 0.09em;
+}
+
+
+@media only screen and (max-width: 600px){
+
+  #root > div > div.navigation > nav > span.navbar-brand.about.name{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: -30px;
+  }
+  #root > div{
+    position: relative;
+  }
+  .navbar{
+    margin-top: 40px;
+  }
+  .titleLine{
+    font-size: 29px;
+  }
+  .tagLine{
+    font-size: 20px;
+
+  }
+  #socialMedia{
+    bottom: 20px;
+    transform: translatex(-50%);
+    left: 50%;
+    top: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    
+  }
+  .introBox{
+    position: static;
+    width: 80%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 150px 40px 90px;
+    transform: none;
+    
+  }
+ 
+
+}
+@media only screen and (max-width: 1024px){
+  #root > div{
+    position: relative;
+  }
+  
+  #socialMedia{
+    bottom: 20px;
+    transform: translatex(-50%);
+    left: 50%;
+    top: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    
+  }
+
+  .phoneProjects{
+    padding: 140px 90px 140px;
+  }
+
 }

@@ -309,7 +309,7 @@ return (
             transitionLeaveTimeout={300}
             >
           {
-          this.state.projectsClicked?(window.innerWidth <= 600)?<PhoneProjects />:
+          this.state.projectsClicked?(window.innerWidth <= 1024)?<PhoneProjects />:
             <Projects showMoreInfo={this.showMoreInfo} hideMoreInfo={this.hideMoreInfo} moreInfo={this.state.moreInfo} link={this.state.link} logoOpacity={this.state.logoOpacity} opacity={this.state.opacity} fun={this.changeMe} text={this.state.innerText} />
             :null
           }
