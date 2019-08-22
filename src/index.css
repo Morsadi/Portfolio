@@ -149,14 +149,15 @@ color:#fff;
 }
 #socialMedia button{
   margin: 7px;
-  height: 40px;
-  width: 40px;
+  height: 45px;
+  width: 45px;
   border-radius: 50%;
   background: none;
   color: #fff;
   border: 2px solid white;
   font-size: 20px;
   outline: none;
+  padding:0;
 }
 
 
@@ -228,7 +229,7 @@ color:#fff;
 .moreInfo{
   margin-top: 20px;
   transition: all 1s ease-in-out;
-  padding: 0 250px;
+  padding: 0 180px;
   letter-spacing: 0.09em;
   font-size: 17px;
 }

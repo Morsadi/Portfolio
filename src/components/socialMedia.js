@@ -16,7 +16,6 @@ return (
 <button onClick={()=>{twitter()}} className="twitter" href="https://twitter.com/BMorsadi" >t</button><br/>
 <button onClick={()=>{linkedIn()}} className="linkedIn" href="https://twitter.com/BMorsadi" >in</button>
 
-
 </div>
 
 

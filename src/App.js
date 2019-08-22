@@ -5,7 +5,8 @@ import {About} from './components/about'
 import { Projects } from './components/projects.js';
 import { SocialMedia } from './components/socialMedia';
 import 'bootstrap/dist/css/bootstrap.css';
-import PhoneProjects from './components/phoneProjects'
+import PhoneProjects from './components/phoneProjects';
+
 
 
 
