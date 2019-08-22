@@ -150,6 +150,7 @@ color:#fff;
 #socialMedia button{
   margin: 7px;
   width: 45px;
+  height: 45px;
   border-radius: 50%;
   background: none;
   color: #fff;
@@ -311,6 +312,7 @@ outline: none
   margin-top: 12px;
   padding: 0;
   margin: 0;
+
 }
 
 .phoneProjects div img{
