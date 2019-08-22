@@ -11,7 +11,6 @@ import PhoneProjects from './components/phoneProjects'
 
 var CSSTransitionGroup = require('react-transition-group/CSSTransitionGroup');
 
-
 class App extends Component {
 
 
