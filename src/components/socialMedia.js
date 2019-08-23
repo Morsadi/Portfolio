@@ -15,14 +15,14 @@ export const SocialMedia = (props) => {
     }
 
 
-    //https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqbQWmXXPrHZDWTWcsGDPjHjZGFtfsJJMzVFfPCzRBsbcXQlwzPLVgRTZzLNVNZvJpMPnB
-return (
+
+    return (
 
 <div id="socialMedia">
 
-<button onClick={()=>{twitter()}} className="twitter" >t</button>
-<button onClick={()=>{linkedIn()}} className="linkedIn" >in</button>
-<button onClick={()=>{email()}} className="linkedIn" >@</button>
+<button style={{color: props.socialBtn.twitter}} onMouseEnter={props.socialHoverOn} onMouseLeave={props.socialHoverOff} onClick={()=>{twitter()}}  name="twitter" >t</button>
+<button style={{color: props.socialBtn.linkedIn}} onMouseEnter={props.socialHoverOn} onMouseLeave={props.socialHoverOff} onClick={()=>{linkedIn()}} name="linkedIn" >in</button>
+<button style={{color: props.socialBtn.email}} onMouseEnter={props.socialHoverOn} onMouseLeave={props.socialHoverOff} onClick={()=>{email()}} name="email" >@</button>
 
 </div>
 

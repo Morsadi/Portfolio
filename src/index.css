@@ -160,6 +160,10 @@ color:#fff;
   font-size: 20px;
   outline: none;
   padding:0;
+  transition: all .3s ease-in-out;
+}
+#socialMedia button:hover{
+  background: #fff;
 }
 
 
@@ -209,7 +213,7 @@ color:#fff;
     transform: translate(-50%);
 }
 .seeMore:hover{
-  color: #066358;
+  color: #154763;
   background: #fff;
 }
 .seeMore:focus{

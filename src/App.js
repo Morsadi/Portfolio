@@ -37,9 +37,17 @@ class App extends Component {
           'HEADRUSH': .3, 
           'ACOUSTICS': .3, 
           'pblr': .3, 
-          'scaler': .3 },
+          'scaler': .3 
+        },
 
-      bgColor: '#066358', 
+        socialBtn:{
+          twitter:'#fff',
+          linkedIn:'#fff',
+          email:'#fff'
+        },
+
+      bgColor: '#066358',
+
       link :'https://alumni.tgs.org/',
       opacity : 1,
       innerText : "",
@@ -47,7 +55,6 @@ class App extends Component {
       homeClicked: true,
       aboutClicked: false,
       projectsClicked: false,
-      contactClicked: false,
      
     };
     this.changeMe = this.changeMe.bind(this);
@@ -214,8 +221,10 @@ componentDidMount(){
       aboutClicked: false,
       projectsClicked: false,
       contactClicked: false,
-     
+      
+      
     })
+
   }
   about(){
 
@@ -225,6 +234,7 @@ componentDidMount(){
           aboutClicked: true,
           projectsClicked: false,
           contactClicked: false,
+          
         })
       
       }
@@ -235,19 +245,34 @@ componentDidMount(){
       aboutClicked: false,
       projectsClicked: true,
       contactClicked: false,
+      
     })
   }
-  contact(){
+  
+  
+  socialHoverOn = (e) =>{
+    let btn = e.target.name
+this.setState({
+      socialBtn:{
+        ...this.state.socialBtn,
+        [btn]: this.state.bgColor
+      }
+})
+
+  }
+  
+  socialHoverOff = (e) =>{
+    let btn = e.target.name
+
     this.setState({
-      bgColor: '#064763',
-      homeClicked: false,
-      aboutClicked: false,
-      projectsClicked: false,
-      contactClicked: true,
+          socialBtn:{
+            ...this.state.socialBtn,
+            [btn]:'#fff'
+          }
     })
+
   }
-  
-  
+
   render(){
 
 
@@ -309,15 +334,20 @@ return (
             transitionLeaveTimeout={300}
             >
           {
-          this.state.projectsClicked?(window.innerWidth <= 1024)?<PhoneProjects />:
-            <Projects showMoreInfo={this.showMoreInfo} hideMoreInfo={this.hideMoreInfo} moreInfo={this.state.moreInfo} link={this.state.link} logoOpacity={this.state.logoOpacity} opacity={this.state.opacity} fun={this.changeMe} text={this.state.innerText} />
+            //if project is clicked, show Projects
+          this.state.projectsClicked?
+          //but first, if the device is an ipad or a smaller device, show phoneProjects instead
+          (window.innerWidth <= 1024)?<PhoneProjects />
+          
+          :<Projects showMoreInfo={this.showMoreInfo} hideMoreInfo={this.hideMoreInfo} moreInfo={this.state.moreInfo} link={this.state.link} logoOpacity={this.state.logoOpacity} opacity={this.state.opacity} fun={this.changeMe} text={this.state.innerText} />
+            
             :null
           }
             </CSSTransitionGroup>
 
 
 
-            <SocialMedia bgColor={this.state.bgColor}/>
+            <SocialMedia bgColor={this.state.bgColor} socialBtn={this.state.socialBtn} socialHoverOff={this.socialHoverOff} socialHoverOn={this.socialHoverOn} />
 
 
 
