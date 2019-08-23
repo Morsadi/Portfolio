@@ -306,6 +306,8 @@ ul li{
     left: 50%;
     transform: translate(-50%);
     top: -30px;
+    font-weight: 700!important;
+    font-size: 30px;
   }
   #root > div{
     position: relative;
@@ -338,6 +340,9 @@ ul li{
     padding: 150px 40px 90px;
     transform: none;
     
+  }
+  .phoneProjects{
+    padding: 140px 0px 140px!important;
   }
  
 
