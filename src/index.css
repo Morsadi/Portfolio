@@ -195,6 +195,31 @@ color:#fff;
   margin-top: 100px;
   position: relative;
   text-align: center;
+  
+}
+.seeCvBox{
+  text-align: center;
+  padding-top: 100px;
+}
+.seeCV{
+  width: 190px;
+    height: 40px;
+    background: none;
+     color: #fff;
+     border: 1px solid #fff;
+      outline: none;
+      transition: all .5s ease-out;
+      font-weight: 600;
+    letter-spacing: 3px;
+    border-radius: 5px;
+    outline: none!important;
+}
+.seeCV:hover{
+  color: #534775;
+  background: #fff;
+}
+.seeCvBox a{
+  margin: 0 20px;
 }
 .seeMore{
    width: 190px;
@@ -212,7 +237,9 @@ color:#fff;
     bottom: -40%;
     left: 50%;
     transform: translate(-50%);
+    border-radius: 5px;
 }
+
 .seeMore:hover{
   color: #154763;
   background: #fff;
@@ -344,7 +371,9 @@ ul li{
   .phoneProjects{
     padding: 140px 0px 140px!important;
   }
- 
+ .seeCvBox{
+  padding-bottom: 50px;
+ }
 
 }
 @media only screen and (max-width: 1024px){
