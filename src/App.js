@@ -181,7 +181,7 @@ class App extends Component {
       this.setState({
         opacity: 0,
         logoOpacity: { TGS: 0.3, HEADRUSH: 0.3, ACOUSTICS: 0.3, pblr: 1, scaler: 0.3 },
-        link: 'https://competent-jang-49a5f5.netlify.com/'
+        link: 'https://pblr.netlify.com/'
       });
       setTimeout(
         function() {
@@ -210,7 +210,7 @@ class App extends Component {
       this.setState({
         opacity: 0,
         logoOpacity: { TGS: 0.3, HEADRUSH: 0.3, ACOUSTICS: 0.3, pblr: 0.3, scaler: 1 },
-        link: 'https://mystifying-chandrasekhar-9563f5.netlify.com/'
+        link: 'https://scaler.netlify.com/'
       });
       setTimeout(
         function() {

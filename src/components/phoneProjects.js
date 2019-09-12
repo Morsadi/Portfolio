@@ -207,7 +207,7 @@ export default class PhoneProjects extends Component {
             <br />
             <br />
             <a
-              href='https://mystifying-chandrasekhar-9563f5.netlify.com/'
+              href='https://scaler.netlify.com/'
               target='_blank'
               rel='noopener noreferrer'
               style={{
@@ -251,7 +251,7 @@ export default class PhoneProjects extends Component {
             <br />
             <br />
             <a
-              href='https://competent-jang-49a5f5.netlify.com/'
+              href='https://pblr.netlify.com/'
               target='_blank'
               rel='noopener noreferrer'
               style={{

@@ -6,7 +6,7 @@ export const About = () => {
 
   return (
     <div>
-      <h1>Hi, I'm Badr</h1>
+      <h1 style={{marginTop: '70px'}}>Hi, I'm Badr</h1>
       <p>
         I am a front-end developer based in Phoenix, Arizona. I love linguistics, Shih Tzus and
         building websites/web apps that improve the lives of those around me. You can typically find
