@@ -102,7 +102,6 @@ p {
   width: 90%;
   margin: 0 auto;
   text-align: left;
-  padding: 0 0 300px;
   color: #fff;
 }
 
@@ -353,8 +352,8 @@ p {
 }
 .seeCvBox {
   text-align: center;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 200px;
+  padding-bottom: 50px;
 }
 .seeCvBox svg {
   opacity: 0.4;
@@ -514,29 +513,6 @@ ul li {
   .projectsBox {
     padding: 0 0 150px;
   }
-  #socialMedia {
-    /* bottom: 20px;
-    transform: translatex(-50%);
-    left: 50%;
-    top: auto;
-    text-align: center;
-    display: flex;
-    flex-direction: row; */
-  }
-  /* .introBox {
-    position: static;
-    width: 80%;
-    width: 100%;
-    margin: 0 auto;
-    padding: 150px 40px 90px;
-    transform: none;
-  }
-  .phoneProjects {
-    padding: 140px 0px 140px !important;
-  }
-  .seeCvBox {
-    padding-bottom: 50px;
-  } */
 
   .snap {
     height: 223.39px;
@@ -564,7 +540,8 @@ ul li {
     margin: 0 auto;
   }
   .tgsSnap,
-  .pblrSnap {
+  .pblrSnap,
+  .morsadiSnap {
     order: 0;
   }
   .navDiv {
@@ -593,6 +570,9 @@ ul li {
   }
   .header {
     height: 100%;
+  }
+  .seeCvBox a {
+    margin: 0 8px;
   }
 }
 @media only screen and (max-width: 1024px) {

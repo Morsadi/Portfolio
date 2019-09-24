@@ -40,6 +40,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-transition-group": "^4.2.2",
     "eslint": "^6.4.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-node": "^4.0.0",

@@ -3,10 +3,12 @@
 import React, { Component } from 'react';
 import { Tagline } from './components/tagline';
 import { Projects } from './components/projects';
-import { SocialMedia } from './components/socialMedia';
+import { Icons } from './components/icons';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const CSSTransitionGroup = require('react-transition-group/CSSTransitionGroup');
+
+const resume = require('./components/assets/Morsadi-Resume.pdf');
 
 class App extends Component {
   constructor(props) {
@@ -23,7 +25,6 @@ class App extends Component {
             transform: 'translatey(0px)',
           },
           hovered: false,
-          animateTitle: false,
         },
         TGS: {
           text: [
@@ -35,7 +36,6 @@ class App extends Component {
             transform: 'translatey(0px)',
           },
           hovered: false,
-          animateTitle: false,
         },
         acoustic: {
           text: [
@@ -47,7 +47,6 @@ class App extends Component {
             transform: 'translatey(0px)',
           },
           hovered: false,
-          animateTitle: false,
         },
         pblr: {
           text: [
@@ -59,7 +58,6 @@ class App extends Component {
             transform: 'translatey(0px)',
           },
           hovered: false,
-          animateTitle: false,
         },
         scaler: {
           text: [
@@ -71,13 +69,18 @@ class App extends Component {
             transform: 'translatey(0px)',
           },
           hovered: false,
-          animateTitle: false,
         },
-      },
-      socialBtn: {
-        twitter: '#fff',
-        linkedIn: '#fff',
-        email: '#fff',
+        morsadi: {
+          text: [
+            'Morsadi is a creative story agency for brands that matter. In offering story + web design, this agency creates content that captures the value of selected brands and spreads their influence. The Morsadi mission is to embolden brands positioned to make a difference and catalyze human connection through the power of story.',
+            'Co-founded by Breanna Morsadi and I, this small family business allows for us to collaborate on projects involving copywriting, story and web design. In creating this site, I used Figma and Adobe XD to develop and design the UI and UX, and converted it to a responsive website using React.',
+          ],
+          style: {
+            opacity: 1,
+            transform: 'translatey(0px)',
+          },
+          hovered: false,
+        },
       },
       bgColor: '#066358',
       homeClicked: true,
@@ -169,52 +172,6 @@ class App extends Component {
     }
   };
 
-  socialHoverOn = e => {
-    const btn = e.target.name;
-    const { socialBtn, bgColor } = this.state;
-    this.setState({
-      socialBtn: {
-        ...socialBtn,
-        [btn]: bgColor,
-      },
-    });
-  };
-
-  socialHoverOff = e => {
-    const btn = e.target.name;
-    const { socialBtn } = this.state;
-    this.setState({
-      socialBtn: {
-        ...socialBtn,
-        [btn]: '#fff',
-      },
-    });
-  };
-
-  home = () => {
-    this.setState({
-      bgColor: '#066358',
-      homeClicked: true,
-      projectsClicked: false,
-    });
-  };
-
-  projects() {
-    this.setState({
-      bgColor: '#534775',
-      homeClicked: false,
-      projectsClicked: true,
-    });
-  }
-
-  about() {
-    this.setState({
-      bgColor: '#534775',
-      homeClicked: false,
-      projectsClicked: false,
-    });
-  }
-
   animateTitle = e => {
     if (window.innerWidth >= 1025) {
       const { navAnimate } = this.state;
@@ -239,17 +196,40 @@ class App extends Component {
     });
   };
 
+  home = () => {
+    window.scrollTo(0, 0);
+    this.setState({
+      bgColor: '#066358',
+      homeClicked: true,
+      projectsClicked: false,
+    });
+  };
+
+  projects() {
+    this.setState({
+      bgColor: '#534775',
+      homeClicked: false,
+      projectsClicked: true,
+    });
+  }
+
+  about() {
+    this.setState({
+      bgColor: '#534775',
+      homeClicked: false,
+      projectsClicked: false,
+    });
+  }
+
   render() {
     // destructuring
     const {
       projects,
-      socialBtn,
       bgColor,
       projectsClicked,
       homeClicked,
       navAnimate,
     } = this.state;
-
     return (
       <div
         style={{
@@ -346,13 +326,39 @@ class App extends Component {
             />
           ) : null}
         </CSSTransitionGroup>
-
-        <SocialMedia
-          bgColor={bgColor}
-          socialBtn={socialBtn}
-          socialHoverOff={this.socialHoverOff}
-          socialHoverOn={this.socialHoverOn}
-        />
+        <div className='seeCvBox'>
+          <a
+            href='https://twitter.com/BMorsadi'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            {Icons.twitter}
+          </a>
+          <a
+            href='https://linkedin.com/in/bmorsadi/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            {Icons.linkedIn}
+          </a>
+          <a
+            href='https://mail.google.com/mail/u/0/#inbox/FMfcgxwDrRSgwqnSjlRhGcXDcSzJwKlZ?compose=VpCqJXKBnlxTTnstQGDVjfPvjndQtFTBdLQsVdSKjkfjJSCsTNjLwBDxZBMXsCdLqLFKmvG'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            {Icons.email}
+          </a>
+          <a href={resume} target='_blank' rel='noopener noreferrer'>
+            {Icons.profile}
+          </a>
+          <a
+            href='https://github.com/Morsadi/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            {Icons.github}
+          </a>
+        </div>
       </div>
     );
   }

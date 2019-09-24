@@ -3,27 +3,23 @@
 /* eslint-disable import/prefer-default-export */
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import { Icons } from './icons';
-
-const resume = require('./assets/Morsadi-Resume.pdf');
 
 export const Tagline = () => (
-  <div className="About">
-    <div className="header">
-      <h1>
-        Hi,
-        <br />
-        I'm Badr
-      </h1>
-    </div>
-    <div style={{}}>
-      <Fade delay={200} bottom>
+  <div className='About'>
+    <Fade delay={500} bottom>
+      <div className='header'>
+        <h1>
+          Hi,
+          <br />
+          I'm Badr
+        </h1>
+      </div>
+      <div style={{}}>
         <p
           style={{
             letterSpacing: '0',
             fontSize: '32px',
-            transform: 'translateX(13px)',
-            marginBottom: '1em'
+            marginBottom: '1em',
           }}
         >
           I'm a front-end developer based in Phoenix, Arizona.
@@ -32,39 +28,35 @@ export const Tagline = () => (
         <p
           style={{
             fontSize: '20px',
-            letterSpacing: '0.08em'
+            letterSpacing: '0.08em',
           }}
         >
           I love linguistics, Shih Tzus and building websites/web apps that
           improve the lives of those around me. You can typically find me buried
           under some Javascript and React, along with HTML & CSS, as I’m a
-          junior developer looking for a team to contribute to. 
-          {' '}
-          <br />
+          junior developer looking for a team to contribute to.
           <br />
         </p>
-      </Fade>
-    </div>
+      </div>
 
-    <Fade delay={500} bottom>
       <div
         style={{
           width: '100%',
-          paddingTop: '45px'
+          paddingTop: '45px',
         }}
       >
         <p
           style={{
             fontSize: '20px',
             letterSpacing: '0.08em',
-            fontWeight: '100'
+            fontWeight: '100',
           }}
         >
           <span
             style={{
               letterSpacing: '0',
               fontSize: '32px',
-              paddingTop: '100px'
+              paddingTop: '100px',
             }}
           >
             When I’m not nerding out on code, you might find me...
@@ -87,17 +79,5 @@ export const Tagline = () => (
         </p>
       </div>
     </Fade>
-    <div className="seeCvBox">
-      <a href={resume} download="Morsadi-Resume.pdf">
-        <span>{Icons.profile}</span>
-      </a>
-      <a
-        href="https://github.com/Morsadi/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {Icons.github}
-      </a>
-    </div>
   </div>
 );

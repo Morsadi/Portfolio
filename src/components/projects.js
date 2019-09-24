@@ -9,13 +9,8 @@ import React from 'react';
 import 'react-awesome-slider/dist/styles.css';
 import Fade from 'react-reveal/Fade';
 
-// name='headrush'
-// onMouseEnter={props.animateTitle}
-// onMouseLeave={props.deAnimateTitle}
-// className={props.projects.headrush.animateTitle ? '' : 'animate'}
-
 export const Projects = props => (
-  <div className='projectsBox' onScroll={props.parallex}>
+  <div className='projectsBox'>
     <Fade delay={500} bottom>
       <div className='headrushSection odd'>
         <h2>HEADRUSH</h2>
@@ -298,10 +293,10 @@ export const Projects = props => (
             }}
           />
 
-          <p style={props.projects.TGS.style}>
-            {props.projects.TGS.hovered
-              ? props.projects.TGS.text[1]
-              : props.projects.TGS.text[0]}
+          <p style={props.projects.morsadi.style}>
+            {props.projects.morsadi.hovered
+              ? props.projects.morsadi.text[1]
+              : props.projects.morsadi.text[0]}
           </p>
           <div
             className='navDiv'
@@ -314,10 +309,12 @@ export const Projects = props => (
             <input
               className='navigators'
               onClick={props.hoverOff}
-              name='TGS'
+              name='morsadi'
               type='button'
               style={{
-                background: props.projects.TGS.hovered ? '#8672BC' : 'white',
+                background: props.projects.morsadi.hovered
+                  ? '#8672BC'
+                  : 'white',
                 height: '15px',
                 width: '15px',
                 borderRadius: '50%',
@@ -330,10 +327,12 @@ export const Projects = props => (
             <input
               className='navigators'
               onClick={props.hoverOn}
-              name='TGS'
+              name='morsadi'
               type='button'
               style={{
-                background: props.projects.TGS.hovered ? 'white' : '#8672BC',
+                background: props.projects.morsadi.hovered
+                  ? 'white'
+                  : '#8672BC',
                 height: '15px',
                 width: '15px',
                 borderRadius: '50%',
