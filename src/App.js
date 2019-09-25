@@ -1,12 +1,10 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { Component } from 'react';
-import { Tagline } from './components/tagline';
+import { Home } from './components/home';
 import { Projects } from './components/projects';
 import { Icons } from './components/icons';
 import 'bootstrap/dist/css/bootstrap.css';
-
-const CSSTransitionGroup = require('react-transition-group/CSSTransitionGroup');
 
 const resume = require('./components/assets/Morsadi-Resume.pdf');
 
@@ -90,6 +88,10 @@ class App extends Component {
         name: false,
         home: false,
         projects: false,
+      },
+      fadeOut: {
+        home: 1,
+        projects: 1,
       },
     };
   }
@@ -197,28 +199,37 @@ class App extends Component {
   };
 
   home = () => {
-    window.scrollTo(0, 0);
+    //fade out projects then show home
     this.setState({
-      bgColor: '#066358',
-      homeClicked: true,
-      projectsClicked: false,
+      fadeOut: {
+        home: 1,
+        projects: 0,
+      },
     });
+    this.fadeProjects = setTimeout(() => {
+      this.setState({
+        bgColor: '#066358',
+        homeClicked: true,
+        projectsClicked: false,
+      });
+    }, 600);
   };
 
   projects() {
+    //fade out home then show projects
     this.setState({
-      bgColor: '#534775',
-      homeClicked: false,
-      projectsClicked: true,
+      fadeOut: {
+        home: 0,
+        projects: 1,
+      },
     });
-  }
-
-  about() {
-    this.setState({
-      bgColor: '#534775',
-      homeClicked: false,
-      projectsClicked: false,
-    });
+    this.fadeHome = setTimeout(() => {
+      this.setState({
+        bgColor: '#534775',
+        homeClicked: false,
+        projectsClicked: true,
+      });
+    }, 600);
   }
 
   render() {
@@ -229,6 +240,7 @@ class App extends Component {
       projectsClicked,
       homeClicked,
       navAnimate,
+      fadeOut,
     } = this.state;
     return (
       <div
@@ -301,31 +313,27 @@ class App extends Component {
         </div>
 
         {/* Show Home content */}
-        <CSSTransitionGroup
-          transitionName='appear'
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={200}
-        >
-          {homeClicked ? <Tagline /> : null}
-        </CSSTransitionGroup>
+
+        {homeClicked ? <Home fadeOut={fadeOut} /> : null}
 
         {/* Show Projects Content */}
-        <CSSTransitionGroup
-          transitionName='showProjects'
+        {/* <CSSTransition
+          className='showProjects'
           transitionEnterTimeout={300}
           transitionLeaveTimeout={300}
-        >
-          {projectsClicked ? (
-            <Projects
-              hoverOn={this.hoverOn}
-              hoverOff={this.hoverOff}
-              projects={projects}
-              parallex={this.parallex}
-              animateTitle={this.animateTitle}
-              deAnimateTitle={this.deAnimateTitle}
-            />
-          ) : null}
-        </CSSTransitionGroup>
+        > */}
+        {projectsClicked ? (
+          <Projects
+            hoverOn={this.hoverOn}
+            hoverOff={this.hoverOff}
+            projects={projects}
+            parallex={this.parallex}
+            animateTitle={this.animateTitle}
+            deAnimateTitle={this.deAnimateTitle}
+            fadeOut={fadeOut}
+          />
+        ) : null}
+        {/* </CSSTransition> */}
         <div className='seeCvBox'>
           <a
             href='https://twitter.com/BMorsadi'

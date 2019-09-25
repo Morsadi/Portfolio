@@ -11,7 +11,7 @@ import 'react-awesome-slider/dist/styles.css';
 import Fade from 'react-reveal/Fade';
 
 export const Projects = props => (
-  <div className='projectsBox'>
+  <div className='projectsBox' style={{ opacity: props.fadeOut.projects }}>
     <Fade delay={500} bottom>
       <div className='headrushSection odd'>
         <h2>HEADRUSH</h2>

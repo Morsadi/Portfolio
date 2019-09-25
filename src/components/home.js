@@ -4,8 +4,8 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 
-export const Tagline = () => (
-  <div className='About'>
+export const Home = props => (
+  <div className='About' style={{ opacity: props.fadeOut.home }}>
     <Fade delay={500} bottom>
       <div className='header'>
         <h1>
