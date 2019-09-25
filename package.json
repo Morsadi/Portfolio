@@ -55,5 +55,8 @@
     "prettier": "^1.18.2",
     "tsutils": "^3.17.1",
     "typescript": "^3.6.3"
+  },
+  "optionalDependencies": {
+    "fsevents": "*"
   }
 }
