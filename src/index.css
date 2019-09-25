@@ -592,7 +592,8 @@ ul li {
     margin: 0 auto;
   }
   .tgsSnap,
-  .pblrSnap {
+  .pblrSnap,
+  .morsadiSnap {
     order: 0;
   }
   .navDiv {
