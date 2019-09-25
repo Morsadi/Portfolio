@@ -187,11 +187,14 @@ p {
 .navigators {
   height: 15px;
   width: 15px;
+  min-width: 15px;
+  min-height: 15px;
   border-radius: 50%;
   margin: 0 10px;
   border: none;
   outline: none;
   transition: all 0.5s ease-in-out;
+  padding: 0px;
 }
 /* ------------------ */
 
@@ -290,30 +293,6 @@ p {
   background: #fff;
   left: 0;
   transition: all 0.5s ease-in-out;
-}
-#socialMedia {
-  transform: translatex(0%);
-  flex-direction: row;
-  text-align: center;
-  padding-bottom: 50px;
-}
-#socialMedia button {
-  margin: 7px;
-  width: 45px;
-  height: 45px;
-  border-radius: 20%;
-  background: none;
-  color: #fff;
-  border: 2px solid white;
-  font-size: 20px;
-  outline: none;
-  padding: 0;
-  transition: all 0.3s ease-in-out;
-  opacity: 0.4;
-}
-#socialMedia button:hover {
-  background: #fff;
-  opacity: 1;
 }
 
 #TGS,
@@ -458,17 +437,6 @@ p {
   margin-bottom: 20px;
   outline: none;
   padding: 0;
-}
-
-.btns {
-  height: 50px;
-  width: 50px;
-  border-radius: 6px;
-  font-size: 32px;
-  font-weight: 100;
-  margin-top: 12px;
-  padding: 0;
-  margin: 0;
 }
 
 .phoneProjects div img {
