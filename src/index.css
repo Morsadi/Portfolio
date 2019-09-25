@@ -457,6 +457,7 @@ p {
   background: none;
   margin-bottom: 20px;
   outline: none;
+  padding: 0;
 }
 
 .btns {
