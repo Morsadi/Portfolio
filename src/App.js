@@ -96,8 +96,13 @@ class App extends Component {
     };
   }
 
+  componentDidMount(){
+    document.title = 'Morsadi - Home'
+  }
+
   componentWillUnmount() {
     clearInterval(this.swap);
+    
   }
 
   hoverOn = e => {
@@ -207,6 +212,8 @@ class App extends Component {
       },
     });
     this.fadeProjects = setTimeout(() => {
+      // set page title accordingly 
+      document.title = 'Morsadi - Home'
       this.setState({
         bgColor: '#066358',
         homeClicked: true,
@@ -224,6 +231,8 @@ class App extends Component {
       },
     });
     this.fadeHome = setTimeout(() => {
+      // set page title accordingly 
+      document.title = 'Morsadi - Projects'
       this.setState({
         bgColor: '#534775',
         homeClicked: false,
