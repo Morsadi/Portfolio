@@ -17,7 +17,7 @@ export const Projects = props => (
         <h2>HEADRUSH</h2>
         <div>
           <img
-            alt='logo'
+            alt='Screenshot of the website HEADRUSH'
             className='headrushSnap snap'
             src={require('./assets/snaps/HEADRUSHsnap.png')}
             onClick={() => {
@@ -73,7 +73,7 @@ export const Projects = props => (
         </h2>
         <div>
           <img
-            alt='logo'
+            alt='Screenshot of the website THINK Global School'
             className='tgsSnap snap'
             src={require('./assets/snaps/TGSsnap.png')}
             onClick={() => {
@@ -137,7 +137,7 @@ export const Projects = props => (
         </h2>
         <div>
           <img
-            alt='logo'
+            alt='Screenshot of the website Acoustic Saturdays'
             className='acousticSnap snap'
             src={require('./assets/snaps/acousticSnap.png')}
             onClick={() => {
@@ -193,7 +193,7 @@ export const Projects = props => (
         </h2>
         <div>
           <img
-            alt='logo'
+            alt='screenshot of the app PBLR'
             className='pblrSnap snap'
             src={require('./assets/snaps/pblrSnap.png')}
             onClick={() => {
@@ -240,7 +240,7 @@ export const Projects = props => (
         <h2>Scaler</h2>
         <div>
           <img
-            alt='logo'
+            alt='Screenshot of the app Scaler'
             className='scalerSnap snap'
             src={require('./assets/snaps/scalerSnap.png')}
             onClick={() => {
@@ -286,7 +286,7 @@ export const Projects = props => (
         <h2>MORSADI</h2>
         <div>
           <img
-            alt='logo'
+            alt='Screenshot of the website Morsadi'
             className='morsadiSnap snap'
             src={require('./assets/snaps/morsadiSnap.png')}
             onClick={() => {

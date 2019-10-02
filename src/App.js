@@ -96,13 +96,32 @@ class App extends Component {
     };
   }
 
-  componentDidMount(){
+  componentDidMount() {
     document.title = 'Morsadi - Home'
   }
 
   componentWillUnmount() {
     clearInterval(this.swap);
-    
+
+  }
+
+  // remove outline when using mouse (accessibility matter)
+  removeOutline = (e) => {
+    const target = e.currentTarget.getAttribute('name')
+
+    this[target].classList.add('hideOutline')
+
+
+
+  }
+
+  // add outline when using keyboard (accessibility matter)
+  addOutline = (e) => {
+    const target = e.currentTarget.getAttribute('name')
+    // this[target].style.outline = '1'
+
+    this[target].classList.remove('hideOutline')
+
   }
 
   hoverOn = e => {
@@ -204,7 +223,7 @@ class App extends Component {
   };
 
   home = () => {
-    //fade out projects then show home
+    // fade out projects then show home
     this.setState({
       fadeOut: {
         home: 1,
@@ -223,7 +242,7 @@ class App extends Component {
   };
 
   projects() {
-    //fade out home then show projects
+    // fade out home then show projects
     this.setState({
       fadeOut: {
         home: 0,
@@ -260,7 +279,11 @@ class App extends Component {
       >
         <div className='navigation'>
           <nav className='navbar navbar-expand-lg navbar-light'>
-            <span
+            <button
+              onMouseDown={this.removeOutline}
+              onKeyDown={this.addOutline}
+              ref={(ref) => { this.name = ref }}
+              type='button'
               onClick={this.home}
               className='navbar-brand about name'
               name='name'
@@ -279,16 +302,20 @@ class App extends Component {
               <span className={navAnimate.name ? 'animate' : ''}>A</span>
               <span className={navAnimate.name ? 'animateUp' : ''}>D</span>
               <span className={navAnimate.name ? 'animate' : ''}>I</span>
-            </span>
+            </button>
 
-            <span
+            <button
+              onMouseDown={this.removeOutline}
+              onKeyDown={this.addOutline}
+              ref={(ref) => { this.projectsRef = ref }}
+              type='button'
               className={
                 projectsClicked
-                  ? 'navbar-brand projects right active'
-                  : 'navbar-brand projects right'
+                  ? 'navbar-brand projects right active hideOutline'
+                  : 'navbar-brand projects right hideOutline'
               }
               onClick={() => this.projects()}
-              name='projects'
+              name='projectsRef'
               onMouseEnter={this.animateTitle}
               onMouseLeave={this.deAnimateTitle}
             >
@@ -300,16 +327,20 @@ class App extends Component {
               <span className={navAnimate.projects ? 'animateUp' : ''}>C</span>
               <span className={navAnimate.projects ? 'animate' : ''}>T</span>
               <span className={navAnimate.projects ? 'animateUp' : ''}>S</span>
-            </span>
+            </button>
 
-            <span
+            <button
+              type='button'
+              onMouseDown={this.removeOutline}
+              onKeyDown={this.addOutline}
+              ref={(ref) => { this.homeRef = ref }}
               className={
                 homeClicked
-                  ? 'navbar-brand right home active'
-                  : 'navbar-brand right home'
+                  ? 'navbar-brand right home active hideOutline'
+                  : 'navbar-brand right home hideOutline'
               }
               onClick={() => this.home()}
-              name='home'
+              name='homeRef'
               onMouseEnter={this.animateTitle}
               onMouseLeave={this.deAnimateTitle}
             >
@@ -317,7 +348,7 @@ class App extends Component {
               <span className={navAnimate.home ? 'animateUp' : ''}>O</span>
               <span className={navAnimate.home ? 'animate' : ''}>M</span>
               <span className={navAnimate.home ? 'animateUp' : ''}>E</span>
-            </span>
+            </button>
           </nav>
         </div>
 
@@ -331,17 +362,19 @@ class App extends Component {
           transitionEnterTimeout={300}
           transitionLeaveTimeout={300}
         > */}
-        {projectsClicked ? (
-          <Projects
-            hoverOn={this.hoverOn}
-            hoverOff={this.hoverOff}
-            projects={projects}
-            parallex={this.parallex}
-            animateTitle={this.animateTitle}
-            deAnimateTitle={this.deAnimateTitle}
-            fadeOut={fadeOut}
-          />
-        ) : null}
+        {
+          projectsClicked ? (
+            <Projects
+              hoverOn={this.hoverOn}
+              hoverOff={this.hoverOff}
+              projects={projects}
+              parallex={this.parallex}
+              animateTitle={this.animateTitle}
+              deAnimateTitle={this.deAnimateTitle}
+              fadeOut={fadeOut}
+            />
+          ) : null
+        }
         {/* </CSSTransition> */}
         <div className='seeCvBox'>
           <a
@@ -376,9 +409,11 @@ class App extends Component {
             {Icons.github}
           </a>
         </div>
-      </div>
+      </div >
     );
   }
 }
+
+
 
 export default App;

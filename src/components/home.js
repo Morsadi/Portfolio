@@ -3,9 +3,12 @@
 /* eslint-disable import/prefer-default-export */
 import React from 'react';
 import Fade from 'react-reveal/Fade';
+import PropTypes from 'prop-types';
 
-export const Home = props => (
-  <div className='About' style={{ opacity: props.fadeOut.home }}>
+export const Home = ({ fadeOut }) => (
+
+
+  <div className='About' style={{ opacity: fadeOut.home }}>
     <Fade delay={500} bottom>
       <div className='header'>
         <h1>
@@ -33,8 +36,7 @@ export const Home = props => (
         >
           I love linguistics, Shih Tzus and building websites/web apps that
           improve the lives of those around me. You can typically find me buried
-          under some Javascript and React, along with HTML & CSS, as I’m a
-          junior developer looking for a team to contribute to.
+          under some Javascript and React, along with HTML & CSS, as I’m a looking for a team to contribute to.
           <br />
         </p>
       </div>
@@ -75,9 +77,18 @@ export const Home = props => (
           <br />
           Volunteering for community arts performances
           <br />
-          Singing renditions of Elvis Prestly and Johnny Cash
+          Singing renditions of Elvis Presley and Johnny Cash
         </p>
       </div>
     </Fade>
   </div>
+
+
 );
+
+Home.propTypes = {
+  fadeOut: PropTypes.shape({
+    home: PropTypes.number.isRequired,
+  }).isRequired
+}
+
