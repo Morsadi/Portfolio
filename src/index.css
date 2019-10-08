@@ -480,6 +480,8 @@ ul li {
   }
   .navbar {
     margin-top: 40px;
+    display: flex!important;
+    justify-content: center!important;
   }
   .titleLine {
     font-size: 300% !important;
@@ -488,9 +490,8 @@ ul li {
     font-size: 210% !important;
   }
   .projectsBox {
-    padding: 0 0 150px;
+    padding: 0 0 0;
   }
-
   .snap {
     height: 223.39px;
     width: 300px;
@@ -550,6 +551,9 @@ ul li {
   }
   .seeCvBox a {
     margin: 0 8px;
+  }
+  .seeCvBox{
+    padding-top: 100px;
   }
 }
 @media only screen and (max-width: 1024px) {

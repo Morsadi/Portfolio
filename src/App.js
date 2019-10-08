@@ -86,8 +86,8 @@ class App extends Component {
 
       navAnimate: {
         name: false,
-        home: false,
-        projects: false,
+        homeRef: false,
+        projectsRef: false,
       },
       fadeOut: {
         home: 1,
@@ -110,9 +110,6 @@ class App extends Component {
     const target = e.currentTarget.getAttribute('name')
 
     this[target].classList.add('hideOutline')
-
-
-
   }
 
   // add outline when using keyboard (accessibility matter)
@@ -121,7 +118,6 @@ class App extends Component {
     // this[target].style.outline = '1'
 
     this[target].classList.remove('hideOutline')
-
   }
 
   hoverOn = e => {
@@ -319,14 +315,14 @@ class App extends Component {
               onMouseEnter={this.animateTitle}
               onMouseLeave={this.deAnimateTitle}
             >
-              <span className={navAnimate.projects ? 'animate' : ''}>P</span>
-              <span className={navAnimate.projects ? 'animateUp' : ''}>R</span>
-              <span className={navAnimate.projects ? 'animate' : ''}>O</span>
-              <span className={navAnimate.projects ? 'animateUp' : ''}>J</span>
-              <span className={navAnimate.projects ? 'animate' : ''}>E</span>
-              <span className={navAnimate.projects ? 'animateUp' : ''}>C</span>
-              <span className={navAnimate.projects ? 'animate' : ''}>T</span>
-              <span className={navAnimate.projects ? 'animateUp' : ''}>S</span>
+              <span className={navAnimate.projectsRef ? 'animate' : ''}>P</span>
+              <span className={navAnimate.projectsRef ? 'animateUp' : ''}>R</span>
+              <span className={navAnimate.projectsRef ? 'animate' : ''}>O</span>
+              <span className={navAnimate.projectsRef ? 'animateUp' : ''}>J</span>
+              <span className={navAnimate.projectsRef ? 'animate' : ''}>E</span>
+              <span className={navAnimate.projectsRef ? 'animateUp' : ''}>C</span>
+              <span className={navAnimate.projectsRef ? 'animate' : ''}>T</span>
+              <span className={navAnimate.projectsRef ? 'animateUp' : ''}>S</span>
             </button>
 
             <button
@@ -344,10 +340,10 @@ class App extends Component {
               onMouseEnter={this.animateTitle}
               onMouseLeave={this.deAnimateTitle}
             >
-              <span className={navAnimate.home ? 'animate' : ''}>H</span>
-              <span className={navAnimate.home ? 'animateUp' : ''}>O</span>
-              <span className={navAnimate.home ? 'animate' : ''}>M</span>
-              <span className={navAnimate.home ? 'animateUp' : ''}>E</span>
+              <span className={navAnimate.homeRef ? 'animate' : ''}>H</span>
+              <span className={navAnimate.homeRef ? 'animateUp' : ''}>O</span>
+              <span className={navAnimate.homeRef ? 'animate' : ''}>M</span>
+              <span className={navAnimate.homeRef ? 'animateUp' : ''}>E</span>
             </button>
           </nav>
         </div>
