@@ -19,14 +19,12 @@ body {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
-
 body::-webkit-scrollbar {
   display: none;
 }
 p {
   font-weight: 100;
 }
-
 .navbar {
   display: inline-block !important;
   width: 100%;
@@ -46,7 +44,6 @@ p {
 .hideOutline{
   outline:none!important;
 }
-
 .name {
   font-weight: 800;
   letter-spacing: 0.105em;
@@ -59,7 +56,6 @@ p {
 .right:hover {
   color: #d7d7d7 !important;
 }
-
 .About {
   width: 62%;
   text-align: left;
@@ -72,7 +68,6 @@ p {
   padding: 130px 0 200px;
   font-weight: 100;
 }
-
 .titleLine {
   font-size: 100px;
   font-family: 'Encode Sans Expanded', sans-serif;
@@ -80,7 +75,6 @@ p {
   color: #fff;
   padding-top: 120px;
 }
-
 .tagLine {
   font-family: 'Encode Sans Expanded', sans-serif;
   font-weight: 100;
@@ -88,7 +82,6 @@ p {
   letter-spacing: 0.31em;
   color: #fff;
 }
-
 .introBox {
   width: 60%;
   position: absolute;
@@ -98,13 +91,11 @@ p {
   top: 50%;
   color: #fff;
 }
-
 .introBox h1 {
   font-size: 50px;
   letter-spacing: 0.11em;
   font-weight: 100;
 }
-
 .projectsBox {
   width: 90%;
   margin: 0 auto;
@@ -112,7 +103,6 @@ p {
   color: #fff;
   transition: all 0.5s ease-in-out;
 }
-
 /* projects */
 .odd div {
   display: flex;
@@ -120,7 +110,6 @@ p {
   justify-content: space-between;
   position: relative;
 }
-
 .odd h2,
 .even h2 {
   transform: translatey(-80px);
@@ -146,7 +135,6 @@ p {
   height: 372px;
   cursor: pointer;
 }
-
 .odd div p,
 .even div p {
   width: 50%;
@@ -156,14 +144,12 @@ p {
   padding-top: 80px;
   transition: all 0.3s ease-in-out;
 }
-
 .odd div p span,
 .even div p span {
   display: inline-block;
   opacity: 0;
   transition: all 0.3s ease-in-out;
 }
-
 .odd,
 .even {
   padding-top: 300px;
@@ -181,12 +167,10 @@ p {
   width: 500px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
 .even h2:before,
 .acousticSection h2:before {
   bottom: 105px;
 }
-
 .morsadiSection h2:before {
   bottom: 35px;
 }
@@ -214,31 +198,26 @@ p {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
-
 .animate {
   transform: translateY(5px) !important;
 }
 .animateUp {
   transform: translateY(-5px) !important;
 }
-
 .fadeOut {
   transform: translateY(-100px);
   opacity: 0;
 }
-
 .fadeIn {
   opacity: 1 !important;
   transform: translateY(-180px);
 }
-
 .floatingicon {
   transition: all 0.5s ease-in-out;
   animation: floating 3s;
   animation-iteration-count: infinite;
   font-weight: 600;
 }
-
 @keyframes floating {
   0% {
     transform: translate(0, 0px);
@@ -257,11 +236,9 @@ p {
 .project {
   margin: 30px;
 }
-
 .appear-enter {
   opacity: 0;
 }
-
 .appear-enter-active {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
@@ -286,10 +263,8 @@ p {
 }
 .showProjects-leave-active {
   opacity: 0;
-
   transition: all 0.2s ease-in-out;
 }
-
 .active:after {
   content: '';
   position: absolute;
@@ -300,7 +275,6 @@ p {
   left: 0;
   transition: all 0.5s ease-in-out;
 }
-
 #TGS,
 #acousticS,
 #headrush,
@@ -316,7 +290,6 @@ p {
 #scaler:hover {
   opacity: 1 !important;
 }
-
 #pblr {
   transform: translateY(18px);
 }
@@ -365,7 +338,6 @@ p {
   border-radius: 5px;
   outline: none !important;
 }
-
 .seeCvBox a {
   margin: 0 20px;
 }
@@ -387,7 +359,6 @@ p {
   transform: translate(-50%);
   border-radius: 5px;
 }
-
 .seeMore:hover {
   color: #154763;
   background: #fff;
@@ -427,7 +398,6 @@ p {
     transform: translate(0, 0px);
   }
 }
-
 .phoneProjects {
   text-align: center;
   padding: 140px 0 140px;
@@ -444,7 +414,6 @@ p {
   outline: none;
   padding: 0;
 }
-
 .phoneProjects div img {
   margin-top: 20px;
 }
@@ -505,7 +474,6 @@ ul li {
   .even {
     padding-top: 200px;
   }
-
   .odd:nth-child(1) {
     padding-top: 300px;
   }
@@ -560,7 +528,6 @@ ul li {
   #root > div {
     position: relative;
   }
-
   .phoneProjects {
     padding: 140px 90px 140px;
   }
@@ -584,7 +551,6 @@ ul li {
   .tagLine {
     font-size: 275%;
   }
-
   .snap {
     height: auto;
     width: 80%;
