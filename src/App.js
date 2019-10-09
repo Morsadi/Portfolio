@@ -60,7 +60,7 @@ class App extends Component {
         scaler: {
           text: [
             'All vocalists know that practicing scales challenges and expands the vocal range. It is difficult for vocalists to transition between key transpositions easily as it requires understanding and, more importantly, time, to adjust a piece accordingly to one’s own vocal range.',
-            'I built this prototype out of a felt need to adjust popular scales to match my deep vocal range. Wireframed/designed in Figma and written in React. This app generates different key transpositions of any song. Now vocalists can submit any original song progression and find the right scales that match their voice.',
+            'I built this prototype out of a felt need to adjust popular scales to match my deep vocal range. Wireframed/designed in Figma, written in React and deployed on Netlify. This app generates different key transpositions of any song. Now vocalists can submit any original song progression and find the right scales that match their voice.',
           ],
           style: {
             opacity: 1,

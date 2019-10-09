@@ -27,8 +27,8 @@ export const Projects = props => (
 
           <p style={props.projects.headrush.style}>
             {props.projects.headrush.hovered
-              ? props.projects.headrush.text[1]
-              : props.projects.headrush.text[0]}
+              ? props.projects.headrush.text[0]
+              : props.projects.headrush.text[1]}
           </p>
           <div
             className='navDiv'
@@ -83,8 +83,8 @@ export const Projects = props => (
 
           <p style={props.projects.TGS.style}>
             {props.projects.TGS.hovered
-              ? props.projects.TGS.text[1]
-              : props.projects.TGS.text[0]}
+              ? props.projects.TGS.text[0]
+              : props.projects.TGS.text[1]}
           </p>
           <div
             className='navDiv'
@@ -147,8 +147,8 @@ export const Projects = props => (
 
           <p style={props.projects.acoustic.style}>
             {props.projects.acoustic.hovered
-              ? props.projects.acoustic.text[1]
-              : props.projects.acoustic.text[0]}
+              ? props.projects.acoustic.text[0]
+              : props.projects.acoustic.text[1]}
           </p>
           <div
             className='navDiv'
@@ -203,8 +203,8 @@ export const Projects = props => (
 
           <p style={props.projects.pblr.style}>
             {props.projects.pblr.hovered
-              ? props.projects.pblr.text[1]
-              : props.projects.pblr.text[0]}
+              ? props.projects.pblr.text[0]
+              : props.projects.pblr.text[1]}
           </p>
           <div
             className='navDiv'
@@ -249,8 +249,8 @@ export const Projects = props => (
           />
           <p style={props.projects.scaler.style}>
             {props.projects.scaler.hovered
-              ? props.projects.scaler.text[1]
-              : props.projects.scaler.text[0]}
+              ? props.projects.scaler.text[0]
+              : props.projects.scaler.text[1]}
           </p>
           <div
             className='navDiv'
@@ -296,8 +296,8 @@ export const Projects = props => (
 
           <p style={props.projects.morsadi.style}>
             {props.projects.morsadi.hovered
-              ? props.projects.morsadi.text[1]
-              : props.projects.morsadi.text[0]}
+              ? props.projects.morsadi.text[0]
+              : props.projects.morsadi.text[1]}
           </p>
           <div
             className='navDiv'
