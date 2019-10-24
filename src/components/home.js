@@ -9,7 +9,9 @@ export const Home = ({ fadeOut }) => (
 
 
   <div className='About' style={{ opacity: fadeOut.home }}>
+
     <Fade delay={500} bottom>
+
       <div className='header'>
         <h1>
           Hi,
