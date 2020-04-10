@@ -6,7 +6,7 @@ import { Projects } from './components/projects';
 import { Icons } from './components/icons';
 import 'bootstrap/dist/css/bootstrap.css';
 
-const resume = require('./components/assets/Morsadi-Resume.pdf');
+const resume = require('./components/assets/snaps/Morsadi-Resume.pdf');
 
 class App extends Component {
   constructor(props) {
@@ -16,52 +16,52 @@ class App extends Component {
         headrush: {
           style: {
             opacity: 1,
-            transform: 'translatey(0px)',
+            transform: 'translatey(0px)'
           },
-          hovered: false,
+          hovered: false
         },
         TGS: {
           style: {
             opacity: 1,
-            transform: 'translatey(0px)',
+            transform: 'translatey(0px)'
           },
-          hovered: false,
+          hovered: false
         },
         acoustic: {
           style: {
             opacity: 1,
-            transform: 'translatey(0px)',
+            transform: 'translatey(0px)'
           },
-          hovered: false,
+          hovered: false
         },
         pblr: {
           style: {
             opacity: 1,
-            transform: 'translatey(0px)',
+            transform: 'translatey(0px)'
           },
-          hovered: false,
+          hovered: false
         },
         scaler: {
           style: {
             opacity: 1,
-            transform: 'translatey(0px)',
+            transform: 'translatey(0px)'
           },
-          hovered: false,
+          hovered: false
         },
         morsadi: {
           style: {
             opacity: 1,
-            transform: 'translatey(0px)',
+            transform: 'translatey(0px)'
           },
-          hovered: false,
+          hovered: false
         },
         drumMachine: {
           style: {
             opacity: 1,
-            transform: 'translatey(0px)',
+            transform: 'translatey(0px)'
           },
-          hovered: false,
-        },
+          hovered: false
+        }
       },
       bgColor: '#066358',
       homeClicked: true,
@@ -69,8 +69,8 @@ class App extends Component {
 
       fadeOut: {
         home: 1,
-        projects: 1,
-      },
+        projects: 1
+      }
     };
   }
 
@@ -111,10 +111,10 @@ class App extends Component {
             ...projects[target],
             style: {
               transform: 'translatey(-40px)',
-              opacity: 0,
-            },
-          },
-        },
+              opacity: 0
+            }
+          }
+        }
       });
       this.swap = setTimeout(() => {
         this.setState({
@@ -125,10 +125,10 @@ class App extends Component {
               hovered: true,
               style: {
                 transform: 'translatey(0px)',
-                opacity: 1,
-              },
-            },
-          },
+                opacity: 1
+              }
+            }
+          }
         });
       }, 600);
     }
@@ -148,10 +148,10 @@ class App extends Component {
             ...projects[target],
             style: {
               transform: 'translatey(-40px)',
-              opacity: 0,
-            },
-          },
-        },
+              opacity: 0
+            }
+          }
+        }
       });
       this.swap = setTimeout(() => {
         this.setState({
@@ -162,10 +162,10 @@ class App extends Component {
               hovered: false,
               style: {
                 transform: 'translatey(0px)',
-                opacity: 1,
-              },
-            },
-          },
+                opacity: 1
+              }
+            }
+          }
         });
       }, 600);
     }
@@ -176,8 +176,8 @@ class App extends Component {
     this.setState({
       fadeOut: {
         home: 1,
-        projects: 0,
-      },
+        projects: 0
+      }
     });
     this.fadeProjects = setTimeout(() => {
       // set page title accordingly
@@ -185,7 +185,7 @@ class App extends Component {
       this.setState({
         bgColor: '#066358',
         homeClicked: true,
-        projectsClicked: false,
+        projectsClicked: false
       });
     }, 600);
   };
@@ -195,8 +195,8 @@ class App extends Component {
     this.setState({
       fadeOut: {
         home: 0,
-        projects: 1,
-      },
+        projects: 1
+      }
     });
     this.fadeHome = setTimeout(() => {
       // set page title accordingly
@@ -204,7 +204,7 @@ class App extends Component {
       this.setState({
         bgColor: '#534775',
         homeClicked: false,
-        projectsClicked: true,
+        projectsClicked: true
       });
     }, 600);
   }
@@ -217,13 +217,13 @@ class App extends Component {
       projectsClicked,
       homeClicked,
       navAnimate,
-      fadeOut,
+      fadeOut
     } = this.state;
     return (
       <div
         style={{
           background: bgColor,
-          transition: 'all 1s linear',
+          transition: 'all 1s linear'
         }}
       >
         <div className='navigation'>
