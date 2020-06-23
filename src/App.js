@@ -216,7 +216,6 @@ class App extends Component {
       bgColor,
       projectsClicked,
       homeClicked,
-      navAnimate,
       fadeOut
     } = this.state;
     return (

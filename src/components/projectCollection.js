@@ -38,7 +38,7 @@ const projects = [
     img: require('./assets/snaps/TGSsnap.png'),
     imgClass: 'tgsSnap snap',
     onClick: () => {
-      window.open('https://changemakers.thinkglobalschool.org/');
+      window.open('https://changemakers.thinkglobalschool.org');
     },
   },
   {
