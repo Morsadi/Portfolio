@@ -11,11 +11,11 @@ import 'react-awesome-slider/dist/styles.css';
 import Fade from 'react-reveal/Fade';
 import projects from './projectCollection';
 
-export const Projects = props => (
+export const Projects = (props) => (
   <div className='projectsBox' style={{ opacity: props.fadeOut.projects }}>
     <Fade delay={500} bottom>
-      {projects.map(project => (
-        <div key={project.name} className={project.className}>
+      {projects.map((project, i) => (
+        <div key={`project ${project.name} ${i}`} className={project.className}>
           {project.title}
           <div>
             <img

@@ -5,6 +5,7 @@ import { Home } from './components/home';
 import { Projects } from './components/projects';
 import { Icons } from './components/icons';
 import 'bootstrap/dist/css/bootstrap.css';
+import ReactGA from 'react-ga';
 
 const resume = require('./components/assets/snaps/Morsadi-Resume.pdf');
 
@@ -16,52 +17,52 @@ class App extends Component {
         headrush: {
           style: {
             opacity: 1,
-            transform: 'translatey(0px)'
+            transform: 'translatey(0px)',
           },
-          hovered: false
+          hovered: false,
         },
         TGS: {
           style: {
             opacity: 1,
-            transform: 'translatey(0px)'
+            transform: 'translatey(0px)',
           },
-          hovered: false
+          hovered: false,
         },
         acoustic: {
           style: {
             opacity: 1,
-            transform: 'translatey(0px)'
+            transform: 'translatey(0px)',
           },
-          hovered: false
+          hovered: false,
         },
         pblr: {
           style: {
             opacity: 1,
-            transform: 'translatey(0px)'
+            transform: 'translatey(0px)',
           },
-          hovered: false
+          hovered: false,
         },
         scaler: {
           style: {
             opacity: 1,
-            transform: 'translatey(0px)'
+            transform: 'translatey(0px)',
           },
-          hovered: false
+          hovered: false,
         },
         morsadi: {
           style: {
             opacity: 1,
-            transform: 'translatey(0px)'
+            transform: 'translatey(0px)',
           },
-          hovered: false
+          hovered: false,
         },
         drumMachine: {
           style: {
             opacity: 1,
-            transform: 'translatey(0px)'
+            transform: 'translatey(0px)',
           },
-          hovered: false
-        }
+          hovered: false,
+        },
       },
       bgColor: '#066358',
       homeClicked: true,
@@ -69,13 +70,15 @@ class App extends Component {
 
       fadeOut: {
         home: 1,
-        projects: 1
-      }
+        projects: 1,
+      },
     };
   }
 
   componentDidMount() {
     document.title = 'Morsadi - Home';
+    ReactGA.initialize('UA-172876039-1');
+    ReactGA.pageview('Home')
   }
 
   componentWillUnmount() {
@@ -83,21 +86,21 @@ class App extends Component {
   }
 
   // remove outline when using mouse (accessibility feature)
-  removeOutline = e => {
+  removeOutline = (e) => {
     const target = e.currentTarget.getAttribute('name');
 
     this[target].classList.add('hideOutline');
   };
 
   // add outline when using keyboard (accessibility feature)
-  addOutline = e => {
+  addOutline = (e) => {
     const target = e.currentTarget.getAttribute('name');
     // this[target].style.outline = '1'
 
     this[target].classList.remove('hideOutline');
   };
 
-  hoverOn = e => {
+  hoverOn = (e) => {
     const { projects } = this.state;
     const target = e.target.getAttribute('name');
     if (
@@ -111,10 +114,10 @@ class App extends Component {
             ...projects[target],
             style: {
               transform: 'translatey(-40px)',
-              opacity: 0
-            }
-          }
-        }
+              opacity: 0,
+            },
+          },
+        },
       });
       this.swap = setTimeout(() => {
         this.setState({
@@ -125,16 +128,16 @@ class App extends Component {
               hovered: true,
               style: {
                 transform: 'translatey(0px)',
-                opacity: 1
-              }
-            }
-          }
+                opacity: 1,
+              },
+            },
+          },
         });
       }, 600);
     }
   };
 
-  hoverOff = e => {
+  hoverOff = (e) => {
     const target = e.target.getAttribute('name');
     const { projects } = this.state;
     if (
@@ -148,10 +151,10 @@ class App extends Component {
             ...projects[target],
             style: {
               transform: 'translatey(-40px)',
-              opacity: 0
-            }
-          }
-        }
+              opacity: 0,
+            },
+          },
+        },
       });
       this.swap = setTimeout(() => {
         this.setState({
@@ -162,10 +165,10 @@ class App extends Component {
               hovered: false,
               style: {
                 transform: 'translatey(0px)',
-                opacity: 1
-              }
-            }
-          }
+                opacity: 1,
+              },
+            },
+          },
         });
       }, 600);
     }
@@ -176,8 +179,8 @@ class App extends Component {
     this.setState({
       fadeOut: {
         home: 1,
-        projects: 0
-      }
+        projects: 0,
+      },
     });
     this.fadeProjects = setTimeout(() => {
       // set page title accordingly
@@ -185,7 +188,7 @@ class App extends Component {
       this.setState({
         bgColor: '#066358',
         homeClicked: true,
-        projectsClicked: false
+        projectsClicked: false,
       });
     }, 600);
   };
@@ -195,8 +198,8 @@ class App extends Component {
     this.setState({
       fadeOut: {
         home: 0,
-        projects: 1
-      }
+        projects: 1,
+      },
     });
     this.fadeHome = setTimeout(() => {
       // set page title accordingly
@@ -204,10 +207,25 @@ class App extends Component {
       this.setState({
         bgColor: '#534775',
         homeClicked: false,
-        projectsClicked: true
+        projectsClicked: true,
       });
     }, 600);
+    ReactGA.event({
+      category: 'Projects Page',
+      action: 'view'
+    })
   }
+  // Google Analytics
+  track = (e) => {
+    if (e.target.parentNode.parentNode.nodeName === 'A') {
+      let element = e.target.parentNode.parentNode.name;
+
+      ReactGA.event({
+        category: element,
+        action: 'click',
+      });
+    }
+  };
 
   render() {
     // destructuring
@@ -216,13 +234,13 @@ class App extends Component {
       bgColor,
       projectsClicked,
       homeClicked,
-      fadeOut
+      fadeOut,
     } = this.state;
     return (
       <div
         style={{
           background: bgColor,
-          transition: 'all 1s linear'
+          transition: 'all 1s linear',
         }}
       >
         <div className='navigation'>
@@ -230,7 +248,7 @@ class App extends Component {
             <button
               onMouseDown={this.removeOutline}
               onKeyDown={this.addOutline}
-              ref={ref => {
+              ref={(ref) => {
                 this.name = ref;
               }}
               type='button'
@@ -244,7 +262,7 @@ class App extends Component {
             <button
               onMouseDown={this.removeOutline}
               onKeyDown={this.addOutline}
-              ref={ref => {
+              ref={(ref) => {
                 this.projectsRef = ref;
               }}
               type='button'
@@ -263,7 +281,7 @@ class App extends Component {
               type='button'
               onMouseDown={this.removeOutline}
               onKeyDown={this.addOutline}
-              ref={ref => {
+              ref={(ref) => {
                 this.homeRef = ref;
               }}
               className={
@@ -301,11 +319,12 @@ class App extends Component {
           />
         ) : null}
         {/* </CSSTransition> */}
-        <div className='seeCvBox'>
+        <div onClick={this.track} className='seeCvBox'>
           <a
             href='https://twitter.com/BMorsadi'
             target='_blank'
             rel='noopener noreferrer'
+            name='Twitter'
           >
             {Icons.twitter}
           </a>
@@ -313,6 +332,7 @@ class App extends Component {
             href='https://linkedin.com/in/bmorsadi/'
             target='_blank'
             rel='noopener noreferrer'
+            name='Linkedin'
           >
             {Icons.linkedIn}
           </a>
@@ -320,16 +340,23 @@ class App extends Component {
             href='https://mail.google.com/mail/u/0/#inbox/FMfcgxwDrRSgwqnSjlRhGcXDcSzJwKlZ?compose=VpCqJXKBnlxTTnstQGDVjfPvjndQtFTBdLQsVdSKjkfjJSCsTNjLwBDxZBMXsCdLqLFKmvG'
             target='_blank'
             rel='noopener noreferrer'
+            name='Email'
           >
             {Icons.email}
           </a>
-          <a href={resume} target='_blank' rel='noopener noreferrer'>
+          <a
+            href={resume}
+            target='_blank'
+            rel='noopener noreferrer'
+            name='Resume'
+          >
             {Icons.profile}
           </a>
           <a
             href='https://github.com/Morsadi/'
             target='_blank'
             rel='noopener noreferrer'
+            name='Github'
           >
             {Icons.github}
           </a>

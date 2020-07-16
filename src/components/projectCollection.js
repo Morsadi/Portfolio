@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ReactGA from 'react-ga';
 const projects = [
   {
     name: 'HEADRUSH',
@@ -15,6 +15,11 @@ const projects = [
     img: require('./assets/snaps/HEADRUSHsnap.png'),
     imgClass: 'headrushSnap snap',
     onClick: () => {
+      ReactGA.event({
+        category: 'Headrush',
+        action: 'click',
+        label: 'Projects'
+      });
       window.open('https://www.headrushlearning.com/');
     },
   },
@@ -38,6 +43,11 @@ const projects = [
     img: require('./assets/snaps/TGSsnap.png'),
     imgClass: 'tgsSnap snap',
     onClick: () => {
+      ReactGA.event({
+        category: 'TGS',
+        action: 'click',
+        label: 'Projects'
+      });
       window.open('https://changemakers.thinkglobalschool.org');
     },
   },
@@ -61,6 +71,11 @@ const projects = [
     img: require('./assets/snaps/acousticSnap.png'),
     imgClass: 'acousticSnap snap',
     onClick: () => {
+      ReactGA.event({
+        category: 'Acoustic Saturdays',
+        action: 'click',
+        label: 'Projects'
+      });
       window.open('https://www.acousticsaturdays.com/');
     },
   },
@@ -84,6 +99,11 @@ const projects = [
     img: require('./assets/snaps/pblrSnap.png'),
     imgClass: 'pblrSnap snap',
     onClick: () => {
+      ReactGA.event({
+        category: 'PBLR',
+        action: 'click',
+        label: 'Projects'
+      });
       window.open('https://pblr.netlify.com/');
     },
   },
@@ -101,6 +121,11 @@ const projects = [
     img: require('./assets/snaps/scalerSnap.png'),
     imgClass: 'scalerSnap snap',
     onClick: () => {
+      ReactGA.event({
+        category: 'Scaler',
+        action: 'click',
+        label: 'Projects'
+      });
       window.open('https://scaler.netlify.com/');
     },
   },
@@ -118,6 +143,11 @@ const projects = [
     img: require('./assets/snaps/morsadiSnap.png'),
     imgClass: 'morsadiSnap snap',
     onClick: () => {
+      ReactGA.event({
+        category: 'Morsadi',
+        action: 'click',
+        label: 'Projects'
+      });
       window.open('https://morsadi.com/');
     },
   },
@@ -141,6 +171,11 @@ const projects = [
     img: require('./assets/snaps/drumPad.png'),
     imgClass: 'drumSnap snap',
     onClick: () => {
+      ReactGA.event({
+        category: 'Drummer',
+        action: 'click',
+        label: 'Projects'
+      });
       window.open('https://morsadidrumpad.netlify.com/');
     },
   },
