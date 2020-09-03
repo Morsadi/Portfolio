@@ -7,7 +7,7 @@ import { Icons } from './components/icons';
 import 'bootstrap/dist/css/bootstrap.css';
 import ReactGA from 'react-ga';
 
-const resume = require('./components/assets/snaps/MorsadiResume.pdf');
+const resume = require('./components/assets/snaps/morsadi-resume.pdf');
 
 class App extends Component {
   constructor(props) {
